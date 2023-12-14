@@ -1,0 +1,68 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-2
+spec:
+    metadata: {}
+    req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8010/products
+        header:
+            Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+            Accept-Encoding: gzip, deflate, br
+            Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+            Cache-Control: max-age=0
+            Connection: keep-alive
+            Cookie: Idea-d44dbdb1=b4d0fcb1-e513-40d9-956d-33cf89263290
+            Host: localhost:8010
+            Sec-Ch-Ua: '"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"'
+            Sec-Ch-Ua-Mobile: ?0
+            Sec-Ch-Ua-Platform: '"Windows"'
+            Sec-Fetch-Dest: document
+            Sec-Fetch-Mode: navigate
+            Sec-Fetch-Site: none
+            Sec-Fetch-User: ?1
+            Upgrade-Insecure-Requests: "1"
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+        body: ""
+        body_type: ""
+        timestamp: 2023-12-14T14:43:13.021027262Z
+        host: ""
+    resp:
+        status_code: 200
+        header:
+            Content-Length: "379"
+            Content-Type: application/json
+            Date: Thu, 14 Dec 2023 14:43:13 GMT
+        body: '[{"id":1,"name":"Bubbles","price":123},{"id":2,"name":"Tees","price":876},{"id":3,"name":"Cardigans","price":981},{"id":4,"name":"Sweaters","price":2000},{"id":5,"name":"Track Pants","price":900},{"id":6,"name":"Track Suit","price":5000},{"id":7,"name":"Air Jordan","price":24000},{"id":8,"name":" ","price":0},{"id":9,"name":" ","price":-1},{"id":10,"name":"","price":-1000000}]'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2023-12-14T14:43:15.025992625Z
+    objects: []
+    assertions:
+        noise:
+            body.price: []
+            header.Date: []
+    created: 1702564995
+curl: |
+    curl --request GET \
+      --url http://localhost:8010/products \
+      --header 'Upgrade-Insecure-Requests: 1' \
+      --header 'Sec-Fetch-Mode: navigate' \
+      --header 'Sec-Ch-Ua-Mobile: ?0' \
+      --header 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7' \
+      --header 'Connection: keep-alive' \
+      --header 'Sec-Fetch-Site: none' \
+      --header 'Accept-Encoding: gzip, deflate, br' \
+      --header 'Host: localhost:8010' \
+      --header 'Sec-Fetch-Dest: document' \
+      --header 'Sec-Ch-Ua-Platform: "Windows"' \
+      --header 'Sec-Fetch-User: ?1' \
+      --header 'Sec-Ch-Ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"' \
+      --header 'Cache-Control: max-age=0' \
+      --header 'Cookie: Idea-d44dbdb1=b4d0fcb1-e513-40d9-956d-33cf89263290' \
+      --header 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36' \
+      --header 'Accept-Language: en-GB,en-US;q=0.9,en;q=0.8' \

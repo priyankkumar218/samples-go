@@ -1,0 +1,40 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-29
+spec:
+    metadata: {}
+    req:
+        method: DELETE
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8010/product
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Content-Length: "16"
+            Content-Type: application/json
+            Host: localhost:8010
+            Postman-Token: 89f07c9e-ea72-46f5-b48c-ede9d0b5d261
+            User-Agent: PostmanRuntime/7.36.0
+        body: "{\r\n  \"id\" : 8\r\n}"
+        body_type: ""
+        timestamp: 2023-12-14T14:08:23.525334261Z
+        host: ""
+    resp:
+        status_code: 405
+        header:
+            Content-Length: "0"
+            Date: Thu, 14 Dec 2023 14:30:47 GMT
+        body: ""
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2023-12-14T14:30:49.729679966Z
+    objects: []
+    assertions:
+        noise:
+            header.Date: []
+    created: 1702564249
+curl: "curl --request DELETE \\\n  --url http://localhost:8010/product \\\n  --header 'Content-Type: application/json' \\\n  --header 'User-Agent: PostmanRuntime/7.36.0' \\\n  --header 'Accept: */*' \\\n  --header 'Postman-Token: 89f07c9e-ea72-46f5-b48c-ede9d0b5d261' \\\n  --header 'Host: localhost:8010' \\\n  --header 'Accept-Encoding: gzip, deflate, br' \\\n  --header 'Connection: keep-alive' \\\n  --data '{\r\n  \"id\" : 8\r\n}'"

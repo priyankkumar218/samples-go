@@ -1,0 +1,48 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-20
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8010/product
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Content-Length: "0"
+            Host: localhost:8010
+            Postman-Token: 84615a9b-723d-4873-b9ff-83ab6f9b7992
+            User-Agent: PostmanRuntime/7.36.0
+        body: ""
+        body_type: ""
+        timestamp: 2023-12-14T14:06:36.356229706Z
+        host: ""
+    resp:
+        status_code: 400
+        header:
+            Content-Length: "35"
+            Content-Type: application/json
+            Date: Thu, 14 Dec 2023 14:29:00 GMT
+        body: '{"error":"Invalid request payload"}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2023-12-14T14:29:02.570638532Z
+    objects: []
+    assertions:
+        noise:
+            header.Date: []
+    created: 1702564142
+curl: |
+    curl --request POST \
+      --url http://localhost:8010/product \
+      --header 'User-Agent: PostmanRuntime/7.36.0' \
+      --header 'Accept: */*' \
+      --header 'Postman-Token: 84615a9b-723d-4873-b9ff-83ab6f9b7992' \
+      --header 'Host: localhost:8010' \
+      --header 'Accept-Encoding: gzip, deflate, br' \
+      --header 'Connection: keep-alive' \

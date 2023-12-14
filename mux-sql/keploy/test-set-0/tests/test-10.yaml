@@ -1,0 +1,42 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-10
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8010/product
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Content-Length: "48"
+            Content-Type: application/json
+            Host: localhost:8010
+            Postman-Token: ff1e8200-237b-4b31-84b0-ff1a242d6c07
+            User-Agent: PostmanRuntime/7.36.0
+        body: "{\r\n  \"name\":\"Air Jordan\",\r\n  \"price\": 24000\r\n  }"
+        body_type: ""
+        timestamp: 2023-12-14T14:04:45.199425523Z
+        host: ""
+    resp:
+        status_code: 201
+        header:
+            Content-Length: "42"
+            Content-Type: application/json
+            Date: Thu, 14 Dec 2023 14:27:09 GMT
+        body: '{"id":7,"name":"Air Jordan","price":24000}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2023-12-14T14:27:11.428659076Z
+    objects: []
+    assertions:
+        noise:
+            body.price: []
+            header.Date: []
+    created: 1702564031
+curl: "curl --request POST \\\n  --url http://localhost:8010/product \\\n  --header 'Content-Type: application/json' \\\n  --header 'User-Agent: PostmanRuntime/7.36.0' \\\n  --header 'Accept: */*' \\\n  --header 'Postman-Token: ff1e8200-237b-4b31-84b0-ff1a242d6c07' \\\n  --header 'Host: localhost:8010' \\\n  --header 'Accept-Encoding: gzip, deflate, br' \\\n  --header 'Connection: keep-alive' \\\n  --data '{\r\n  \"name\":\"Air Jordan\",\r\n  \"price\": 24000\r\n  }'"

@@ -1,0 +1,42 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-21
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8010/product
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Content-Length: "68"
+            Content-Type: text/plain
+            Host: localhost:8010
+            Postman-Token: 76ae00a6-7ddd-4737-a323-a53c22534ff4
+            User-Agent: PostmanRuntime/7.36.0
+        body: "{\r\n  \"name\": \"\",\r\n  \"price\": -1000000,\r\n  \"randomKey\" : 398893420\r\n}"
+        body_type: ""
+        timestamp: 2023-12-14T14:06:55.922692611Z
+        host: ""
+    resp:
+        status_code: 201
+        header:
+            Content-Length: "36"
+            Content-Type: application/json
+            Date: Thu, 14 Dec 2023 14:29:20 GMT
+        body: '{"id":11,"name":"","price":-1000000}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2023-12-14T14:29:22.15012518Z
+    objects: []
+    assertions:
+        noise:
+            body.id: []
+            header.Date: []
+    created: 1702564162
+curl: "curl --request POST \\\n  --url http://localhost:8010/product \\\n  --header 'Accept: */*' \\\n  --header 'Postman-Token: 76ae00a6-7ddd-4737-a323-a53c22534ff4' \\\n  --header 'Host: localhost:8010' \\\n  --header 'Accept-Encoding: gzip, deflate, br' \\\n  --header 'Connection: keep-alive' \\\n  --header 'Content-Type: text/plain' \\\n  --header 'User-Agent: PostmanRuntime/7.36.0' \\\n  --data '{\r\n  \"name\": \"\",\r\n  \"price\": -1000000,\r\n  \"randomKey\" : 398893420\r\n}'"

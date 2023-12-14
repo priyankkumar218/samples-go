@@ -1,0 +1,41 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-8
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8010/product
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Content-Length: "47"
+            Content-Type: application/json
+            Host: localhost:8010
+            Postman-Token: aadbbc07-08ec-4956-9500-6e95ab3e2af7
+            User-Agent: PostmanRuntime/7.36.0
+        body: "{\r\n  \"name\":\"Track Pants\",\r\n  \"price\": 900\r\n  }"
+        body_type: ""
+        timestamp: 2023-12-14T14:04:19.500784427Z
+        host: ""
+    resp:
+        status_code: 201
+        header:
+            Content-Length: "41"
+            Content-Type: application/json
+            Date: Thu, 14 Dec 2023 14:26:43 GMT
+        body: '{"id":5,"name":"Track Pants","price":900}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2023-12-14T14:26:45.729840715Z
+    objects: []
+    assertions:
+        noise:
+            header.Date: []
+    created: 1702564005
+curl: "curl --request POST \\\n  --url http://localhost:8010/product \\\n  --header 'Postman-Token: aadbbc07-08ec-4956-9500-6e95ab3e2af7' \\\n  --header 'Host: localhost:8010' \\\n  --header 'Accept-Encoding: gzip, deflate, br' \\\n  --header 'Connection: keep-alive' \\\n  --header 'Content-Type: application/json' \\\n  --header 'User-Agent: PostmanRuntime/7.36.0' \\\n  --header 'Accept: */*' \\\n  --data '{\r\n  \"name\":\"Track Pants\",\r\n  \"price\": 900\r\n  }'"

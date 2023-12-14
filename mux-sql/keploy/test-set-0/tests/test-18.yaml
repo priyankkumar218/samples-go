@@ -1,0 +1,41 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-18
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8010/product
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Content-Length: "42"
+            Content-Type: text/plain
+            Host: localhost:8010
+            Postman-Token: 02081773-bf12-42b4-ac35-cd1b7a287473
+            User-Agent: PostmanRuntime/7.36.0
+        body: "{\r\n  \"name\": '',\r\n  \"price\": -1000000\r\n  }"
+        body_type: ""
+        timestamp: 2023-12-14T14:06:17.448594515Z
+        host: ""
+    resp:
+        status_code: 400
+        header:
+            Content-Length: "35"
+            Content-Type: application/json
+            Date: Thu, 14 Dec 2023 14:28:41 GMT
+        body: '{"error":"Invalid request payload"}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2023-12-14T14:28:43.664008352Z
+    objects: []
+    assertions:
+        noise:
+            header.Date: []
+    created: 1702564123
+curl: "curl --request POST \\\n  --url http://localhost:8010/product \\\n  --header 'Connection: keep-alive' \\\n  --header 'Content-Type: text/plain' \\\n  --header 'User-Agent: PostmanRuntime/7.36.0' \\\n  --header 'Accept: */*' \\\n  --header 'Postman-Token: 02081773-bf12-42b4-ac35-cd1b7a287473' \\\n  --header 'Host: localhost:8010' \\\n  --header 'Accept-Encoding: gzip, deflate, br' \\\n  --data '{\r\n  \"name\": '',\r\n  \"price\": -1000000\r\n  }'"

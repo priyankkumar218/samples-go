@@ -1,0 +1,579 @@
+version: api.keploy.io/v1beta1
+name: report-2
+status: PASSED
+success: 6
+failure: 0
+total: 6
+tests:
+    - kind: Http
+      name: report-2
+      status: PASSED
+      started: 1702565096
+      completed: 1702565096
+      test_case_path: /files/keploy/test-set-1
+      mock_path: ""
+      test_case_id: test-1
+      req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://172.18.0.4:8010/products
+        header:
+            Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+            Accept-Encoding: gzip, deflate, br
+            Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+            Connection: keep-alive
+            Cookie: Idea-d44dbdb1=b4d0fcb1-e513-40d9-956d-33cf89263290
+            Host: localhost:8010
+            Sec-Ch-Ua: '"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"'
+            Sec-Ch-Ua-Mobile: ?0
+            Sec-Ch-Ua-Platform: '"Windows"'
+            Sec-Fetch-Dest: document
+            Sec-Fetch-Mode: navigate
+            Sec-Fetch-Site: none
+            Sec-Fetch-User: ?1
+            Upgrade-Insecure-Requests: "1"
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+        body: ""
+        body_type: ""
+        timestamp: 0001-01-01T00:00:00Z
+        host: ""
+      resp:
+        status_code: 200
+        header:
+            Content-Length: "379"
+            Content-Type: application/json
+            Date: Thu, 14 Dec 2023 14:43:04 GMT
+        body: '[{"id":1,"name":"Bubbles","price":123},{"id":2,"name":"Tees","price":876},{"id":3,"name":"Cardigans","price":981},{"id":4,"name":"Sweaters","price":2000},{"id":5,"name":"Track Pants","price":900},{"id":6,"name":"Track Suit","price":5000},{"id":7,"name":"Air Jordan","price":24000},{"id":8,"name":" ","price":0},{"id":9,"name":" ","price":-1},{"id":10,"name":"","price":-1000000}]'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+      noise:
+        body.price: []
+        header.Date: []
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "379"
+              actual:
+                key: Content-Length
+                value:
+                    - "379"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Thu, 14 Dec 2023 14:43:04 GMT
+              actual:
+                key: Date
+                value:
+                    - Thu, 14 Dec 2023 14:44:56 GMT
+        body_result:
+            - normal: true
+              type: JSON
+              expected: '[{"id":1,"name":"Bubbles","price":123},{"id":2,"name":"Tees","price":876},{"id":3,"name":"Cardigans","price":981},{"id":4,"name":"Sweaters","price":2000},{"id":5,"name":"Track Pants","price":900},{"id":6,"name":"Track Suit","price":5000},{"id":7,"name":"Air Jordan","price":24000},{"id":8,"name":" ","price":0},{"id":9,"name":" ","price":-1},{"id":10,"name":"","price":-1000000}]'
+              actual: '[{"id":1,"name":"Bubbles","price":123},{"id":2,"name":"Tees","price":876},{"id":3,"name":"Cardigans","price":981},{"id":4,"name":"Sweaters","price":2000},{"id":5,"name":"Track Pants","price":900},{"id":6,"name":"Track Suit","price":5000},{"id":7,"name":"Air Jordan","price":24000},{"id":8,"name":" ","price":0},{"id":9,"name":" ","price":-1},{"id":10,"name":"","price":-1000000}]'
+        dep_result: []
+    - kind: Http
+      name: report-2
+      status: PASSED
+      started: 1702565096
+      completed: 1702565096
+      test_case_path: /files/keploy/test-set-1
+      mock_path: ""
+      test_case_id: test-2
+      req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://172.18.0.4:8010/products
+        header:
+            Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+            Accept-Encoding: gzip, deflate, br
+            Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+            Cache-Control: max-age=0
+            Connection: keep-alive
+            Cookie: Idea-d44dbdb1=b4d0fcb1-e513-40d9-956d-33cf89263290
+            Host: localhost:8010
+            Sec-Ch-Ua: '"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"'
+            Sec-Ch-Ua-Mobile: ?0
+            Sec-Ch-Ua-Platform: '"Windows"'
+            Sec-Fetch-Dest: document
+            Sec-Fetch-Mode: navigate
+            Sec-Fetch-Site: none
+            Sec-Fetch-User: ?1
+            Upgrade-Insecure-Requests: "1"
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+        body: ""
+        body_type: ""
+        timestamp: 0001-01-01T00:00:00Z
+        host: ""
+      resp:
+        status_code: 200
+        header:
+            Content-Length: "379"
+            Content-Type: application/json
+            Date: Thu, 14 Dec 2023 14:43:13 GMT
+        body: '[{"id":1,"name":"Bubbles","price":123},{"id":2,"name":"Tees","price":876},{"id":3,"name":"Cardigans","price":981},{"id":4,"name":"Sweaters","price":2000},{"id":5,"name":"Track Pants","price":900},{"id":6,"name":"Track Suit","price":5000},{"id":7,"name":"Air Jordan","price":24000},{"id":8,"name":" ","price":0},{"id":9,"name":" ","price":-1},{"id":10,"name":"","price":-1000000}]'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+      noise:
+        body.price: []
+        header.Date: []
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "379"
+              actual:
+                key: Content-Length
+                value:
+                    - "379"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Thu, 14 Dec 2023 14:43:13 GMT
+              actual:
+                key: Date
+                value:
+                    - Thu, 14 Dec 2023 14:44:56 GMT
+        body_result:
+            - normal: true
+              type: JSON
+              expected: '[{"id":1,"name":"Bubbles","price":123},{"id":2,"name":"Tees","price":876},{"id":3,"name":"Cardigans","price":981},{"id":4,"name":"Sweaters","price":2000},{"id":5,"name":"Track Pants","price":900},{"id":6,"name":"Track Suit","price":5000},{"id":7,"name":"Air Jordan","price":24000},{"id":8,"name":" ","price":0},{"id":9,"name":" ","price":-1},{"id":10,"name":"","price":-1000000}]'
+              actual: '[{"id":1,"name":"Bubbles","price":123},{"id":2,"name":"Tees","price":876},{"id":3,"name":"Cardigans","price":981},{"id":4,"name":"Sweaters","price":2000},{"id":5,"name":"Track Pants","price":900},{"id":6,"name":"Track Suit","price":5000},{"id":7,"name":"Air Jordan","price":24000},{"id":8,"name":" ","price":0},{"id":9,"name":" ","price":-1},{"id":10,"name":"","price":-1000000}]'
+        dep_result: []
+    - kind: Http
+      name: report-2
+      status: PASSED
+      started: 1702565096
+      completed: 1702565096
+      test_case_path: /files/keploy/test-set-1
+      mock_path: ""
+      test_case_id: test-3
+      req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://172.18.0.4:8010/products'
+        header:
+            Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+            Accept-Encoding: gzip, deflate, br
+            Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+            Connection: keep-alive
+            Cookie: Idea-d44dbdb1=b4d0fcb1-e513-40d9-956d-33cf89263290
+            Host: localhost:8010
+            Sec-Ch-Ua: '"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"'
+            Sec-Ch-Ua-Mobile: ?0
+            Sec-Ch-Ua-Platform: '"Windows"'
+            Sec-Fetch-Dest: document
+            Sec-Fetch-Mode: navigate
+            Sec-Fetch-Site: none
+            Sec-Fetch-User: ?1
+            Upgrade-Insecure-Requests: "1"
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+        body: ""
+        body_type: ""
+        timestamp: 0001-01-01T00:00:00Z
+        host: ""
+      resp:
+        status_code: 404
+        header:
+            Content-Length: "19"
+            Content-Type: text/plain; charset=utf-8
+            Date: Thu, 14 Dec 2023 14:43:18 GMT
+            X-Content-Type-Options: nosniff
+        body: |
+            404 page not found
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+      noise:
+        header.Date: []
+      result:
+        status_code:
+            normal: true
+            expected: 404
+            actual: 404
+        headers_result:
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Thu, 14 Dec 2023 14:43:18 GMT
+              actual:
+                key: Date
+                value:
+                    - Thu, 14 Dec 2023 14:44:56 GMT
+            - normal: true
+              expected:
+                key: X-Content-Type-Options
+                value:
+                    - nosniff
+              actual:
+                key: X-Content-Type-Options
+                value:
+                    - nosniff
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "19"
+              actual:
+                key: Content-Length
+                value:
+                    - "19"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - text/plain; charset=utf-8
+              actual:
+                key: Content-Type
+                value:
+                    - text/plain; charset=utf-8
+        body_result:
+            - normal: true
+              type: PLAIN
+              expected: |
+                404 page not found
+              actual: |
+                404 page not found
+        dep_result: []
+    - kind: Http
+      name: report-2
+      status: PASSED
+      started: 1702565096
+      completed: 1702565096
+      test_case_path: /files/keploy/test-set-1
+      mock_path: ""
+      test_case_id: test-4
+      req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://172.18.0.4:8010/
+        header:
+            Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+            Accept-Encoding: gzip, deflate, br
+            Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+            Connection: keep-alive
+            Cookie: Idea-d44dbdb1=b4d0fcb1-e513-40d9-956d-33cf89263290
+            Host: localhost:8010
+            Sec-Ch-Ua: '"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"'
+            Sec-Ch-Ua-Mobile: ?0
+            Sec-Ch-Ua-Platform: '"Windows"'
+            Sec-Fetch-Dest: document
+            Sec-Fetch-Mode: navigate
+            Sec-Fetch-Site: none
+            Sec-Fetch-User: ?1
+            Upgrade-Insecure-Requests: "1"
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+        body: ""
+        body_type: ""
+        timestamp: 0001-01-01T00:00:00Z
+        host: ""
+      resp:
+        status_code: 404
+        header:
+            Content-Length: "19"
+            Content-Type: text/plain; charset=utf-8
+            Date: Thu, 14 Dec 2023 14:43:22 GMT
+            X-Content-Type-Options: nosniff
+        body: |
+            404 page not found
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+      noise:
+        header.Date: []
+      result:
+        status_code:
+            normal: true
+            expected: 404
+            actual: 404
+        headers_result:
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - text/plain; charset=utf-8
+              actual:
+                key: Content-Type
+                value:
+                    - text/plain; charset=utf-8
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Thu, 14 Dec 2023 14:43:22 GMT
+              actual:
+                key: Date
+                value:
+                    - Thu, 14 Dec 2023 14:44:56 GMT
+            - normal: true
+              expected:
+                key: X-Content-Type-Options
+                value:
+                    - nosniff
+              actual:
+                key: X-Content-Type-Options
+                value:
+                    - nosniff
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "19"
+              actual:
+                key: Content-Length
+                value:
+                    - "19"
+        body_result:
+            - normal: true
+              type: PLAIN
+              expected: |
+                404 page not found
+              actual: |
+                404 page not found
+        dep_result: []
+    - kind: Http
+      name: report-2
+      status: PASSED
+      started: 1702565096
+      completed: 1702565096
+      test_case_path: /files/keploy/test-set-1
+      mock_path: ""
+      test_case_id: test-5
+      req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://172.18.0.4:8010/products/1
+        header:
+            Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+            Accept-Encoding: gzip, deflate, br
+            Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+            Connection: keep-alive
+            Cookie: Idea-d44dbdb1=b4d0fcb1-e513-40d9-956d-33cf89263290
+            Host: localhost:8010
+            Sec-Ch-Ua: '"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"'
+            Sec-Ch-Ua-Mobile: ?0
+            Sec-Ch-Ua-Platform: '"Windows"'
+            Sec-Fetch-Dest: document
+            Sec-Fetch-Mode: navigate
+            Sec-Fetch-Site: none
+            Sec-Fetch-User: ?1
+            Upgrade-Insecure-Requests: "1"
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+        body: ""
+        body_type: ""
+        timestamp: 0001-01-01T00:00:00Z
+        host: ""
+      resp:
+        status_code: 404
+        header:
+            Content-Length: "19"
+            Content-Type: text/plain; charset=utf-8
+            Date: Thu, 14 Dec 2023 14:43:28 GMT
+            X-Content-Type-Options: nosniff
+        body: |
+            404 page not found
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+      noise:
+        header.Date: []
+      result:
+        status_code:
+            normal: true
+            expected: 404
+            actual: 404
+        headers_result:
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "19"
+              actual:
+                key: Content-Length
+                value:
+                    - "19"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - text/plain; charset=utf-8
+              actual:
+                key: Content-Type
+                value:
+                    - text/plain; charset=utf-8
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Thu, 14 Dec 2023 14:43:28 GMT
+              actual:
+                key: Date
+                value:
+                    - Thu, 14 Dec 2023 14:44:56 GMT
+            - normal: true
+              expected:
+                key: X-Content-Type-Options
+                value:
+                    - nosniff
+              actual:
+                key: X-Content-Type-Options
+                value:
+                    - nosniff
+        body_result:
+            - normal: true
+              type: PLAIN
+              expected: |
+                404 page not found
+              actual: |
+                404 page not found
+        dep_result: []
+    - kind: Http
+      name: report-2
+      status: PASSED
+      started: 1702565096
+      completed: 1702565096
+      test_case_path: /files/keploy/test-set-1
+      mock_path: ""
+      test_case_id: test-6
+      req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://172.18.0.4:8010/products/1/1
+        header:
+            Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+            Accept-Encoding: gzip, deflate, br
+            Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+            Connection: keep-alive
+            Cookie: Idea-d44dbdb1=b4d0fcb1-e513-40d9-956d-33cf89263290
+            Host: localhost:8010
+            Sec-Ch-Ua: '"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"'
+            Sec-Ch-Ua-Mobile: ?0
+            Sec-Ch-Ua-Platform: '"Windows"'
+            Sec-Fetch-Dest: document
+            Sec-Fetch-Mode: navigate
+            Sec-Fetch-Site: none
+            Sec-Fetch-User: ?1
+            Upgrade-Insecure-Requests: "1"
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+        body: ""
+        body_type: ""
+        timestamp: 0001-01-01T00:00:00Z
+        host: ""
+      resp:
+        status_code: 404
+        header:
+            Content-Length: "19"
+            Content-Type: text/plain; charset=utf-8
+            Date: Thu, 14 Dec 2023 14:43:35 GMT
+            X-Content-Type-Options: nosniff
+        body: |
+            404 page not found
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+      noise:
+        header.Date: []
+      result:
+        status_code:
+            normal: true
+            expected: 404
+            actual: 404
+        headers_result:
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "19"
+              actual:
+                key: Content-Length
+                value:
+                    - "19"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - text/plain; charset=utf-8
+              actual:
+                key: Content-Type
+                value:
+                    - text/plain; charset=utf-8
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Thu, 14 Dec 2023 14:43:35 GMT
+              actual:
+                key: Date
+                value:
+                    - Thu, 14 Dec 2023 14:44:56 GMT
+            - normal: true
+              expected:
+                key: X-Content-Type-Options
+                value:
+                    - nosniff
+              actual:
+                key: X-Content-Type-Options
+                value:
+                    - nosniff
+        body_result:
+            - normal: true
+              type: PLAIN
+              expected: |
+                404 page not found
+              actual: |
+                404 page not found
+        dep_result: []
+test_set: test-set-1

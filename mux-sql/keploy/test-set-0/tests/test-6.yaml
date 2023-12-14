@@ -1,0 +1,42 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-6
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8010/product
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Content-Length: "45"
+            Content-Type: application/json
+            Host: localhost:8010
+            Postman-Token: 887655c3-45f6-4442-a4eb-1469dfaa7a6a
+            User-Agent: PostmanRuntime/7.36.0
+        body: "{\r\n  \"name\":\"Cardigans\",\r\n  \"price\": 981\r\n  }"
+        body_type: ""
+        timestamp: 2023-12-14T14:03:49.660704501Z
+        host: ""
+    resp:
+        status_code: 201
+        header:
+            Content-Length: "39"
+            Content-Type: application/json
+            Date: Thu, 14 Dec 2023 14:26:13 GMT
+        body: '{"id":3,"name":"Cardigans","price":981}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2023-12-14T14:26:15.892179873Z
+    objects: []
+    assertions:
+        noise:
+            body.price: []
+            header.Date: []
+    created: 1702563975
+curl: "curl --request POST \\\n  --url http://localhost:8010/product \\\n  --header 'Content-Type: application/json' \\\n  --header 'User-Agent: PostmanRuntime/7.36.0' \\\n  --header 'Accept: */*' \\\n  --header 'Postman-Token: 887655c3-45f6-4442-a4eb-1469dfaa7a6a' \\\n  --header 'Host: localhost:8010' \\\n  --header 'Accept-Encoding: gzip, deflate, br' \\\n  --header 'Connection: keep-alive' \\\n  --data '{\r\n  \"name\":\"Cardigans\",\r\n  \"price\": 981\r\n  }'"

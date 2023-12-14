@@ -1,0 +1,50 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-30
+spec:
+    metadata: {}
+    req:
+        method: DELETE
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8010/product
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Content-Length: "15"
+            Content-Type: application/x-www-form-urlencoded
+            Host: localhost:8010
+            Postman-Token: 3f5d62e4-8d20-4294-9a54-2cb785e36c90
+            User-Agent: PostmanRuntime/7.36.0
+        body: namw=John%20Doe
+        body_type: ""
+        timestamp: 2023-12-14T14:08:44.251853346Z
+        host: ""
+    resp:
+        status_code: 405
+        header:
+            Content-Length: "0"
+            Date: Thu, 14 Dec 2023 14:31:08 GMT
+        body: ""
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2023-12-14T14:31:10.456210455Z
+    objects: []
+    assertions:
+        noise:
+            header.Date: []
+    created: 1702564270
+curl: |-
+    curl --request DELETE \
+      --url http://localhost:8010/product \
+      --header 'Accept: */*' \
+      --header 'Postman-Token: 3f5d62e4-8d20-4294-9a54-2cb785e36c90' \
+      --header 'Host: localhost:8010' \
+      --header 'Accept-Encoding: gzip, deflate, br' \
+      --header 'Connection: keep-alive' \
+      --header 'Content-Type: application/x-www-form-urlencoded' \
+      --header 'User-Agent: PostmanRuntime/7.36.0' \
+      --data 'namw=John%20Doe'
